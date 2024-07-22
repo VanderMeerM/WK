@@ -53,7 +53,7 @@ echo '
 
 
 echo '
-/<label for="datepicker">Datum</label>
+<label for="datepicker">Datum</label>
 <input type="text" name="datepicker" id="datepicker" value = ' . (!$_GET['date'] ? date($selectedWCSeason . '-m-d') : $_GET['date']) . '>
 
 </div>
