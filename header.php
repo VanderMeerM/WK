@@ -3,7 +3,7 @@
 
 $league_id = 1;
 $path= './WK';
-$current_wc_season = 2022;
+$current_wc_season = $last_wc_season;
 
 $seasonInUrl = $_GET['season'];
 $startSeasonInUrl = $wc_seasons[$seasonInUrl]['start'];
