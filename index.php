@@ -104,7 +104,7 @@ if ($numGames > 0 ) {
   if (array_search($homeTeam, $countries)) { echo array_search($homeTeam, $countries); } 
   else { echo $homeTeam; }  
   
- // Check if hometeam won after penalty shootout 
+ // Check if hometeam won after penalty shootout
  if ((strpos($response['response'][$i]['league']['round'], 'Group') === false) && 
  ($response['response'][$i]['teams']['home']['winner']) && 
  (!is_null($response['response'][$i]['score']['penalty']['home']))
