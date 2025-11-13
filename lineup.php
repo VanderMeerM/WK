@@ -1,7 +1,7 @@
 
 <?php
 
-$json_lineup_path = $path . '/json/lineups/lineup_' . $_GET['id'] . '.json'; 
+$json_lineup_path = './json/lineups/lineup_' . $_GET['id'] . '.json'; 
 
 if (!file_exists($json_lineup_path)) { 
 

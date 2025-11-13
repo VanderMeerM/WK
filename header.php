@@ -79,7 +79,7 @@ if (!$_GET['date']) {
   sessionStorage.setItem('startWCLeagueSeason', startDateLastWCSeason);
   sessionStorage.setItem('endWCLeagueSeason', endDateLastWCSeason);
 
-  window.open(`${path}.php?season=${currentWCSeason}&league=${leagueId}&date=${endDateLastWCSeason}`, '_self');
+  window.open(`?season=${currentWCSeason}&league=${leagueId}&date=${endDateLastWCSeason}`, '_self');
   </script>
   <?php
 }
@@ -125,7 +125,7 @@ if(isset($_POST["season_selection"])){
     sessionStorage.setItem('startWCLeagueSeason', startWCSeason);
     sessionStorage.setItem('endWCLeagueSeason', endWCSeason);
 
-  window.open(`${path}.php?season=${selectedWCSeason}&league=${leagueId}&date=${endWCSeason}`, '_self');
+  window.open(`?season=${selectedWCSeason}&league=${leagueId}&date=${endWCSeason}`, '_self');
 
   </script>
   <?php
@@ -149,7 +149,7 @@ $( "#datepicker" ).datepicker({
   $( "#datepicker" ).on('change', function() {
 
     let selectedDateInPicker = document.getElementById('datepicker').value;
-   window.open(`${path}.php?season=${sessionStorage.getItem('selectedWCLeagueSeason', selectedWCSeason)}&league=${leagueId}&date=${selectedDateInPicker}`, '_self')
+   window.open(`?season=${sessionStorage.getItem('selectedWCLeagueSeason', selectedWCSeason)}&league=${leagueId}&date=${selectedDateInPicker}`, '_self')
  });
   </script>
   
