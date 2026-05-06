@@ -108,14 +108,14 @@ sessionStorage.setItem('endWCLeagueSeason', endSeasonInUrl);
 
 </script>
 
-<?
+<?php
 
 if(isset($_POST["season_selection"])){
   $selectedWCSeason = $_POST['season_selection'];
   setcookie('selected_wc_league_season', $selectedWCSeason, time() + 3600, "/");
   $startWCSeason = $wc_seasons[$selectedWCSeason]['start'];
   $endWCSeason = $wc_seasons[$selectedWCSeason]['end'];
-  ?>
+?>
 
   <script>
     selectedWCSeason =  <?php echo json_encode($selectedWCSeason) ?>;
@@ -128,9 +128,9 @@ if(isset($_POST["season_selection"])){
   window.open(`?season=${selectedWCSeason}&league=${leagueId}&date=${endWCSeason}`, '_self');
 
   </script>
+  
   <?php
-
-   }
+  }
      
  ?>
 

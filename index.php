@@ -15,9 +15,14 @@
 
 <?php 
 
+/*
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+*/
+
 include('../euro_wc_translations.php');
 include('./header.php');
-
 
 $json_matches_path = './json/matches/matches_date_' . $day . '_.json'; 
 
@@ -126,9 +131,7 @@ if ($numGames > 0 ) {
          $response['response'][$i]['goals']['home'] . '-' . 
          $response['response'][$i]['goals']['away'];
           
-         echo '<div style="font-size:15pt">'. (array_key_exists($matchStatus, $status)? 
-         $status[$matchStatus] : null) . 
-          '</div>
+         echo '<div style="font-size:15pt">'. (array_key_exists($matchStatus, $status) ? $status[$matchStatus] : null) . '</div>
           </div>'; 
 
          // check if a team won after extra time 
